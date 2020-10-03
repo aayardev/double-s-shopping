@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+button:focus {
+  outline: none;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.main-header {
+  min-height: 10vh;
+  width: 80%;
+  padding: 2rem 0;
+  margin: auto;
+}
+nav {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+#logo {
+  flex: 1;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+}
+nav ul li {
+  margin-left: 30px;
+}
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+main a {
+  color: white;
+}
+#Vetements,
+#Accesoires {
+  min-height: 50vh;
+  text-align: center;
+  padding: 20px 0;
+}
+
+#Vetements h1,
+#Accesoires h1 {
+  padding: 60px 0;
+  position: relative;
+}
+#Vetements h1::after,
+#Accesoires h1::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 60px;
+  height: 5px;
+  background-color: #d34052;
+}
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.categorie {
+  height: 300px;
+  background-color: #d34052;
+  width: 33%;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.categorie h2 {
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+.btn {
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 10px;
+  background-color: #d34052;
+}
+
+footer {
+  margin-top: 60px;
+  padding: 60px 0;
+  background-color: #d34052;
+  color: white;
+  position: relative;
+}
+footer p {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.contact {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+.contact ul {
+  display: flex;
+}
+.contact ul .fa {
+  width: 30px;
+  color: white;
+}
+@media screen and (max-width: 912px) {
+  .navigation {
+    display: none;
+  }
+  .categories {
+    flex-direction: column;
+  }
+  .categorie {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .burger span {
+    background-color: black;
+    width: 3rem;
+    padding: 0.2rem;
+    margin-bottom: 5px;
+    transform-origin: bottom center;
+    display: block;
+    transition: transform 0.5s;
+  }
+  .burger {
+    cursor: pointer;
+    padding-right: 30px;
+  }
+  #logo {
+    padding-left: 30px;
+  }
+  .main-header {
+    margin: 0;
+    width: 100%;
+  }
+  .nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    text-align: center;
+    padding: 100px 0;
+    z-index: 2;
+  }
+  .nav a {
+    font-size: 20px;
+    color: white;
+  }
+  nav ul li {
+    margin: 0;
+  }
+  .nav ul {
+    height: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .burger.white span {
+    background-color: white;
+  }
+  /* .burger.white span:first-child {
+    transform: rotate(135deg);
+  }
+  .burger.white span:last-child {
+    transform: rotate(-135deg);
+  }
+  .burger.white span:nth-child(2) {
+    display: none;
+  } */
+  .burger.white {
+    z-index: 3;
+  }
+}
+@media screen and (max-width: 320px) {
+  .burger {
+    padding-right: 0px;
+  }
+}
+@media screen and (max-width: 300px) {
+  #logo {
+    padding-left: 0px;
+  }
+  main {
+    width: 100%;
+    text-align: center;
+  }
+  nav {
+    flex-direction: column;
+  }
+}
